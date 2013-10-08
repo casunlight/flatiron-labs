@@ -106,7 +106,7 @@ class Jukebox
       songs.map do |song|
         index += 1
         song_downcase = song.downcase
-        song_with_index(song, index-1) unless song_downcase[selection.downcase] == nil
+        song_with_index(song, index-1) if song_downcase[selection.downcase]
       end.compact
     end
 
